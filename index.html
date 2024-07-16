@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EC2 instance</title>
+    <title>Responsive Web Page</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: violet;
+            padding: 20px;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Gallery section styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Image container styles */
+        .image-container {
+            flex: 1 1 calc(33.333% - 40px); /* Adjusting width with space for gaps */
+            max-width: calc(33.333% - 40px);
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        /* Ensuring images are responsive */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .image-container {
+                flex: 1 1 calc(50% - 40px);
+                max-width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-container {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* LinkedIn button styles */
+        .linkedin-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #292c2f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .linkedin-button:hover {
+            background-color: #005582;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>"Hi, I am Gaurav, I am hosting my first EC2 instance on apache web server. I successfully installed an EC2 instance, SSH'd into it, installed and set up apache, and deployed this website."</h1>
+        <a href="https://www.linkedin.com/in/gaurav-bhatt-4186441b8/" class="linkedin-button" target="_blank">Connect Me on LinkedIn</a>
+        <a href="https://gauravbhatt.netlify.app/" class="linkedin-button" target="_blank">My Portfolio</a>
+    </header>
+    </header>
+    <section class="gallery">
+        <div class="image-container">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmFkbnRva2tuM3F0cG54NjV5ZXV6bm9lbXlwbXVkaDJscDZhNmU4dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0ftlv3lxv8Z815mkXH/giphy.gif" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="https://www.ewaycorp.com/wp-content/uploads/2022/09/MicrosoftTeams-image-8.jpg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="https://pimylifeup.com/wp-content/uploads/2022/06/Ubunutu-Flush-DNS-Cache-Thumbnail-NoWM.jpg" alt="Image 3">
+        </div>
+    </section>
 </body>
 </html>
